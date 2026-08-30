@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+header p {
+    color: #777;
+}
+
+/* Add Task Section */
+.add-task {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input,
+select,
+button {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input,
+select {
+    border: 1px solid #ccc;
+}
+
+button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#taskInput {
+    flex: 1;
+}
+
+/* Search */
+.search-section {
+    margin-bottom: 15px;
+}
+
+.search-section input {
+    width: 100%;
+}
+
+/* Filter and Sort */
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.controls select {
+    flex: 1;
+}
+
+/* Undo Redo */
+.history-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.history-controls button {
+    background: #6b7280;
+}
+
+/* Task Section */
+.task-section h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Individual Task */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid #2563eb;
+}
+
+.task-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.task-priority {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Task Buttons */
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-btn {
+    background: #f59e0b;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+.complete-btn {
+    background: #16a34a;
+}
+
+/* Search Highlight */
+.highlight {
+    background: yellow;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .add-task,
+    .controls {
+        flex-direction: column;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .task-actions {
+        flex-wrap: wrap;
+    }
+}
